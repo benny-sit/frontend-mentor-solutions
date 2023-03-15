@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+
+:root {
+--Blue: hsl(246, 80%, 60%);
+
+--Light-red: hsl(15, 100%, 70%);
+--Soft-blue: hsl(195, 74%, 62%);
+--Light-red: hsl(348, 100%, 68%);
+--Lime-green: hsl(145, 58%, 55%);
+--Violet: hsl(264, 64%, 52%);
+--Soft-orange: hsl(43, 84%, 65%);
+
+--Very-dark-blue: hsl(226, 43%, 10%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background-color: var(--Very-dark-blue);
+  margin: 1rem;
+}
+
+
+
+
+.time-grid {
+
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 900px;
+    --br-card: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.time-grid p {
+  font-size: 12px;
+}
+
+.time-grid__user {
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  color: var(--Pale-Blue);
+  background-color: var(--Dark-blue);
+  border-radius: var(--br-card);
+}
+
+
+
+.time-grid__user .user-details {
+  flex-grow: 1;
+  background-color: var(--Blue);
+  border-radius: var(--br-card);
+  padding: 1.5rem;
+  display: flex;
+  gap: .5rem;
+}
+
+.time-grid__user .user-details__img { 
+  border-radius: 999px;
+  max-width: 60px;
+  max-height: 60px;
+  aspect-ratio: 1;
+  border: 2px solid white;
+}
+
+.time-grid__user .user-details__inner {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.time-grid__user .user-details__inner h3 {
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: white;
+  opacity: 0.9;
+}
+
+/* .time-grid__user .user-details__inner p {
+  
+} */
+
+.time-grid__user .user-timeline {
+  list-style: none;
+  padding: 1rem 1.5rem;
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+
+}
+
+.time-grid__user .user-timeline .selected {
+  color: white;
+  opacity: 0.9;
+}
+
+.time-grid__user .user-timeline button {
+  color: var(--Pale-Blue);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+
+.card {
+  overflow: hidden;
+  border-radius: var(--br-card);
+  color: var(--Pale-Blue);
+  min-height: 50px;
+}
+
+
+.card > div:first-child {
+  height: 45px;
+  margin-bottom: -12px;
+  position: relative;
+}
+
+.card > div:first-child img {
+  width: 60px;
+  position: absolute;
+  right: 1rem;
+  top: -0.25rem;
+}
+
+
+.card_work > div:first-child {
+  background-color: #ff8b64;
+}
+
+.card_play > div:first-child {
+  background-color: var(--Soft-blue);
+}
+
+.card_study > div:first-child {
+  background-color: var(--Light-red);
+}
+
+.card_exercise > div:first-child {
+  background-color: var(--Lime-green);
+}
+
+.card_social > div:first-child {
+  background-color: var(--Violet);
+}
+
+.card_self-care > div:first-child {
+  background-color: var(--Soft-orange);
+}
+
+.card_ > div:first-child {
+  background-color: #ff8b64;
+}
+
+.card__stats,
+.card__title {
+  background-color: var(--Dark-blue);
+  position: relative;
+}
+
+.card__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: var(--br-card) var(--br-card) 0 0;
+  
+  padding-bottom: .5rem;
+}
+
+.card__title span {
+  font-weight: 500;
+  color: white;
+  opacity: 0.9;
+}
+
+.card__title button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.card__stats {
+  display: flex;
+  padding: 1.5rem;
+  padding-top: 0;
+  justify-content: space-between;
+  align-items: center;
+  gap: .25rem;
+}
+
+.card__stats > h3 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  color: white;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.btn-more img {
+  max-width: 16px;
+}
+
+
+@media (min-width: 450px) {
+  .card__stats {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .card__title {
+    padding-bottom: 1.25rem;
+  }
+
+  .time-grid__user .user-timeline {
+  flex-direction: column;
+  justify-content: flex-start;
+  }
+
+  .time-grid__user .user-details {
+    flex-direction: column;
+  }
+
+  .time-grid__user .user-details__inner h3 {
+    font-size: 2rem;
+  }
+}

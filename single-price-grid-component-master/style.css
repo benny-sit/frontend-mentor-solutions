@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  :root {
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+   --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+  }
+
+  body {
+    display: grid;
+    place-items: center;
+    background-color: var(--Light-Gray);
+  }
+
+
+
+  .card {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    max-width: 600px;
+    border-radius: var(--br);
+    font-family: 'Karla';
+    isolation: isolate;
+
+    --br: .5rem;
+  }
+
+  @media (min-width: 500px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+    .card__left {
+        border-radius: 0 0 0 var(--br);
+    }
+  }
+
+.card > div {
+padding: 2rem;
+}
+
+.title {
+margin-bottom: 1rem;
+font-weight: 700;
+}
+
+.card p {
+    font-size: 14px;
+}
+  
+.card .card__top {
+grid-column: 1 / -1;
+background: white;
+border-radius: var(--br) var(--br) 0 0;
+}
+
+
+.card__top .title {
+    color: var(--Cyan);
+}
+
+.card__top .sub-title {
+    color: var(--Bright-Yellow);
+    margin-bottom: .5rem;
+}
+
+.card__top p {
+    max-width: 550px;
+    color: var(--Grayish-Blue);
+}
+
+
+.card .card__left {
+background: var(--Cyan);
+
+color: var(--Light-Gray);
+}
+
+.card__left  .pricing {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.card__left .pricing span:first-child {
+    font-size: 2rem;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.card__left .pricing span:last-child {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.card__left .btn-sign {
+    border: 0;
+    border-radius: 6px;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-block: .6rem;
+    font-size: 14px;
+    font-family: 'Karla';
+    font-weight: 700;
+    background: var(--Bright-Yellow);
+    color: var(--Light-Gray);
+    cursor: pointer;
+}
+
+.card__left .btn-sign:is(:hover, :focus) {
+    filter: brightness(0.97);
+
+}
+
+
+.card .card__right {
+border-radius: 0 0 var(--br) 0;
+position: relative;
+color: var(--Light-Gray);
+
+}
+
+.card .card__right::before {
+content: '';
+position: absolute;
+opacity: 0.8;
+border-radius: inherit;
+inset: 0;
+z-index: -1;
+background-color: var(--Cyan);
+}
+
+.card .card__right p {
+font-size: .75rem;
+max-width: 145px;
+opacity: 0.8;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="module" src="/main.js" defer></script>
+</head>
+<body>
+  <section aria-labelledby="title-user-name" class="time-grid">
+    <header class="time-grid__user">
+      <div class="user-details">
+        <img class="user-details__img" src="/images/image-jeremy.png" alt="">
+        <div class="user-details__inner">
+          <p>Report for</p>
+          <h3 class="user-details__name" id="title-user-name">
+            Jeremy Robson
+          </h3>
+        </div>
+      </div>
+      <ul class="user-timeline">
+        <li>
+          <button data-json="daily" class="btn-timeline">
+            Daily
+          </button>
+        </li>
+        <li class="">
+          <button data-json="weekly" class="btn-timeline selected">
+            Weekly
+          </button>
+        </li>
+        <li>
+          <button data-json="monthly" class="btn-timeline">
+            Monthly
+          </button>
+        </li>
+      </ul>
+    </header>
+    <div class="card card_work" >
+      <div>
+        <img src="/images/icon-work.svg" alt="">
+      </div>
+      <div class="card__title">
+        <span>Work</span>
+        <button class="btn-more">
+          <img src="/images/icon-ellipsis.svg" alt="More Btn"/> 
+        </button>
+      </div>
+      <div class="card__stats" id="work-stats">
+        <h3 >
+          32hrs
+        </h3>
+        <p>
+          Last Week - 36hrs
+        </p>
+      </div>
+    </div>
+    <div class="card card_play" >
+      <div>
+        <img src="/images/icon-play.svg" alt="">
+      </div>
+      <div class="card__title">
+        <span>Play</span>
+        <button class="btn-more">
+          <img src="/images/icon-ellipsis.svg" alt="More Btn"/> 
+        </button>
+      </div>
+      <div class="card__stats" id="play-stats">
+        <h3 >
+          10hrs
+        </h3>
+        <p>
+          Last Week - 8hrs
+        </p>
+      </div>
+    </div>
+    <div class="card card_study" >
+      <div>
+        <img src="/images/icon-study.svg" alt="">
+      </div>
+      <div class="card__title">
+        <span>Study</span>
+        <button class="btn-more">
+          <img src="/images/icon-ellipsis.svg" alt="More Btn"/> 
+        </button>
+      </div>
+      <div class="card__stats" id="study-stats">
+        <h3 >
+          4hrs
+        </h3>
+        <p>
+          Last Week - 7hrs
+        </p>
+      </div>
+    </div>
+    <div class="card card_exercise" >
+      <div>
+        <img src="/images/icon-exercise.svg" alt="">
+      </div>
+      <div class="card__title">
+        <span>Exercise</span>
+        <button class="btn-more">
+          <img src="/images/icon-ellipsis.svg" alt="More Btn"/> 
+        </button>
+      </div>
+      <div class="card__stats" id="exercise-stats">
+        <h3 >
+          4hrs
+        </h3>
+        <p>
+          Last Week - 5hrs
+        </p>
+      </div>
+    </div>
+    <div class="card card_social" >
+      <div>
+        <img src="/images/icon-social.svg" alt="">
+      </div>
+      <div class="card__title">
+        <span>Social</span>
+        <button class="btn-more">
+          <img src="/images/icon-ellipsis.svg" alt="More Btn"/> 
+        </button>
+      </div>
+      <div class="card__stats" id="social-stats">
+        <h3 >
+          5hrs
+        </h3>
+        <p>
+          Last Week - 10hrs
+        </p>
+      </div>
+    </div>
+    <div class="card card_self-care" >
+      <div>
+        <img src="/images/icon-self-care.svg" alt="">
+      </div>
+      <div class="card__title">
+        <span>Self Care</span>
+        <button class="btn-more">
+          <img src="/images/icon-ellipsis.svg" alt="More Btn"/> 
+        </button>
+      </div>
+      <div class="card__stats" id="self-care-stats">
+        <h3 >
+          2hrs
+        </h3>
+        <p>
+          Last Week - 2hrs
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+</body>
+</html>
