@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  img {
+    max-width: 100vw;
+  }
+} 
+
+@layer components {
+  .navLink {
+    @apply relative before:absolute before:h-[2px] before:w-4 before:bg-white before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:opacity-0 hover:before:opacity-100
+  }
+}
