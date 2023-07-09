@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Loopstudios landing page</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <header class="navbar">
+          <img class="navLogo" src="/images/logo.svg" alt="" />
+          <nav class="links">
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Events</a>
+            <a href="#">Products</a>
+            <a href="#">Support</a>
+          </nav>
+          <button class="btn-hamburger">
+            <img src="/images/icon-hamburger.svg" alt="mobile-nav">
+          </button>
+        </header>
+        <h1 class="title" id="hero-title">
+          Immersive <br />
+          experiences <br />
+          that deliver
+        </h1>
+      </div>
+    </section>
+
+    <section class="hero2" aria-labelledby="hero2-title">
+      <img
+        class="hero2Img"
+        src="/images/desktop/image-interactive.jpg"
+        alt="interactive"
+      />
+      <div class="heroTxt">
+        <h2 id="hero2-title">The leader in interactive VR</h2>
+        <p>
+          Founded in 2011, Loopstudios has been producing world-class virtual
+          reality projects for some of the best companies around the globe. Our
+          award-winning creations have transformed businesses through digital
+          experiences that bind to their brand.
+        </p>
+      </div>
+    </section>
+
+    <section class="ourCreations" aria-labelledby="our-creations">
+      <div class="header">
+        <h3 id="our-creations">Our creations</h3>
+
+        <button>See all</button>
+      </div>
+
+      <div class="grid">
+        <article class="item">
+          <picture>
+            <source media="(max-width:1050px)" srcset="/images/mobile/image-deep-earth.jpg" >
+            <img class="img" src="/images/desktop/image-deep-earth.jpg" alt="" />
+          </picture>
+          <span class="text">Deep
+            earth</span>
+        </article>
+        <article class="item">
+          <picture>
+            <source media="(max-width:1050px)" srcset="/images/mobile/image-night-arcade.jpg" >
+            <img
+              class="img"
+              src="/images/desktop/image-night-arcade.jpg"
+              alt=""
+            />
+          </picture>
+          <span class="text">Night
+            arcade</span>
+        </article>
+        <article class="item">
+          <picture>
+            <source media="(max-width:1050px)" srcset="/images/mobile/image-soccer-team.jpg" >
+            <img class="img" src="/images/desktop/image-soccer-team.jpg" alt="" />
+          </picture>
+          <span class="text">Soccer
+            team VR</span>
+        </article>
+        <article class="item">
+          <picture>
+            <source media="(max-width:1050px)" srcset="/images/mobile/image-grid.jpg" >
+            <img class="img" src="/images/desktop/image-grid.jpg" alt="" />
+          </picture>
+          <span class="text">The
+            grid</span>
+        </article>
+        <article class="item">
+          <picture>
+            <source media="(max-width:1050px)" srcset="/images/mobile/image-from-above.jpg" >
+            <img class="img" src="/images/desktop/image-from-above.jpg" alt="" />
+          </picture>
+          <span class="text">From up
+            above VR</span>
+        </article>
+        <article class="item">
+          <picture>
+            <source media="(max-width:1050px)" srcset="/images/mobile/image-pocket-borealis.jpg" >
+            <img
+              class="img"
+              src="/images/desktop/image-pocket-borealis.jpg"
+              alt=""
+            />
+          </picture>
+          <span class="text">Pocket
+            borealis</span>
+        </article>
+        <article class="item">
+          <picture>
+            <source media="(max-width:1050px)" srcset="/images/mobile/image-curiosity.jpg" >
+            <img class="img" src="/images/desktop/image-curiosity.jpg" alt="" />
+          </picture>
+          <span class="text">The
+            curiosity</span>
+        </article>
+        <article class="item">
+          <picture>
+            <source media="(max-width:1050px)" srcset="/images/mobile/image-fisheye.jpg" >
+            <img class="img" src="/images/desktop/image-fisheye.jpg" alt="" />
+          </picture>
+          <span class="text">Make it
+            fisheye</span>
+        </article>
+      </div>
+      <div class="mobile-btn">
+        <button class="btn-see-all">See all</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="flexBetween">
+          <img class="navLogo" src="/images/logo.svg" alt="" width="192" />
+          <div class="outerLinks">
+            <a href="#">
+              <img src="/images/icon-facebook.svg" alt="">
+            </a><a href="#">
+              <img src="/images/icon-twitter.svg" alt="">
+            </a><a href="#">
+              <img src="/images/icon-pinterest.svg" alt="">
+            </a><a href="#">
+              <img src="/images/icon-instagram.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="flexBetween">
+          <div class="links">
+            <a href="#">
+              About
+            </a><a href="#">
+              Careers
+            </a><a href="#">
+              Events
+            </a><a href="#">
+              Products
+              </a
+            ><a href="#">
+              Support
+            </a>
+          </div>
+
+          <div class="rights">
+            © 2021 Loopstudios. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
